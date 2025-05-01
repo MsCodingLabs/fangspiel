@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* Setzt Box-Modell für alle Elemente */
+* {
+  box-sizing: border-box;
+}
+
+/* Definiert Farbvariablen */
+html {
+  --primary-color: #d4a373;
+  --secondary-color: #fefae0;
+}
+
+/* Grundlegende Stile für den Body */
+body {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Shantell Sans", serif;
+}
+
+/* Standardbildschirm-Layout */
+.screen {
+  display: none; /* Bildschirme standardmäßig verstecken */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vh;
+}
+
+/* Sichtbarer Bildschirm */
+.screen.visible {
+  display: flex; /* Macht den Bildschirm sichtbar */
+}
+
+/* Stil für den Start-Button */
+.btn {
+  border: 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 15px 20px;
+  cursor: pointer;
+  font-family: inherit; /* Erbt Schriftart */
+}
+.btn:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Stil für die Süßigkeitenliste */
+.sweets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Stil für jedes Listenelement */
+.sweets-list li {
+  margin: 10px;
+}
+
+/* Stil für die Buttons zur Auswahl der Süßigkeiten */
+.choose-sweet-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+/* Hover-Effekt für die Süßigkeiten-Buttons */
+.choose-sweet-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Stil für die Bilder der Süßigkeiten */
+.choose-sweet-btn img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Stil für das Spielcontainer */
+.game-container {
+  position: relative;
+}
+
+/* Position der Zeit und des Punktestands */
+.time,
+.score {
+  position: absolute;
+  top: 20px;
+
+  font-weight: bold; /* Fettere Schrift für besseren Kontrast */
+  color: #333; /* Dunklerer Text für besseren Kontrast */
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out; /* Übergangseffekte */
+}
+
+.time {
+  left: 20px;
+}
+
+.score {
+  right: 20px;
+}
+
+/* Beispiel für die Änderungen beim Endbildschirm */
+.end-screen .time,
+.end-screen .score {
+  font-size: 2.5rem; /* Noch größere Schrift für den Endbildschirm */
+  color: #d4a373; /* Ein goldener Farbton für den Endbildschirm */
+}
+
+/* Stil für die Süßigkeiten im Spiel */
+.sweet {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+/* Media Queries für verschiedene Bildschirmgrößen */
+/* Mobile-Ansicht: Geräte unter 600px (z.B. Smartphones) */
+@media (max-width: 600px) {
+  .screen {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+  }
+
+  .choose-sweet-btn {
+    width: 120px;
+    height: 120px;
+  }
+
+  .choose-sweet-btn img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .time,
+  .score {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet-Ansicht: Geräte zwischen 600px und 1024px */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .screen {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 12px 18px;
+    font-size: 1.4rem;
+  }
+
+  .choose-sweet-btn {
+    width: 130px;
+    height: 130px;
+  }
+
+  .choose-sweet-btn img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .time,
+  .score {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop-Ansicht: Geräte mit mehr als 1024px */
+@media (min-width: 1024px) {
+  .screen {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 15px 20px;
+    font-size: 1.6rem;
+  }
+
+  .choose-sweet-btn {
+    width: 150px;
+    height: 150px;
+  }
+
+  .choose-sweet-btn img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .time,
+  .score {
+    font-size: 2rem;
+  }
+}

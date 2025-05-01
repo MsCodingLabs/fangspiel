@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fangspiel</title>
+  </head>
+
+  <body>
+    <div class="screen visible">
+      <h2>Spiel: Schnapp die Süßigkeit!</h2>
+      <button class="btn" id="start-btn">Spiel starten</button>
+    </div>
+
+    <!-- Auswahlbildschirm für Lieblingssnack -->
+    <div class="screen">
+      <h2>Wähle deinen Lieblingssnack!</h2>
+      <ul class="sweets-list">
+        <!-- Auswahloptionen mit Bild und Name -->
+        <li>
+          <button class="choose-sweet-btn">
+            <p>Eis</p>
+            <img src="./image/eis.png" alt="Eis" />
+          </button>
+        </li>
+        <li>
+          <button class="choose-sweet-btn">
+            <p>Erdbeere</p>
+            <img src="./image/erdbeere.png" alt="Erdbeere" />
+          </button>
+        </li>
+        <li>
+          <button class="choose-sweet-btn">
+            <p>Kuchen</p>
+            <img src="./image/kuchen.png" alt="Kuchen" />
+          </button>
+        </li>
+        <li>
+          <button class="choose-sweet-btn">
+            <p>Pizza</p>
+            <img src="./image/pizza.png" alt="Pizza" />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Spielfeld mit Anzeige für Zeit und Punktestand -->
+    <div class="screen game-container" id="game-container">
+      <h3 id="time" class="time">Zeit: 0</h3>
+      <h3 id="score" class="score">Punktestand: 0</h3>
+    </div>
+
+    <!-- Ton für Essensgeräusch beim Fangen -->
+    <audio id="audio" src="./assets/bite.mp3"></audio>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
