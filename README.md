@@ -4,6 +4,10 @@
 
 Wähle deinen Lieblingssnack und fang die Süßigkeiten, die auf deinem Bildschirm erscheinen – bevor sie wieder verschwinden! Aber sei schnell, der Timer tickt. Je mehr Süßigkeiten du fängst, desto mehr Punkte bekommst du. Kannst du den höchsten Punktestand erreichen?
 
+## Screenshot
+![fangspiel.png](https://github.com/MsCodingLabs/quizze/blob/main/quizze.png)
+
+
 ## ✨ Features
 
 - 🍩 Wähle aus vier leckeren Snacks
